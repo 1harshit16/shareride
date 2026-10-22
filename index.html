@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShareRide | Better Journeys Together</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<header>
+    <nav class="navbar">
+        <a href="#" class="logo">ShareRide<span>.</span></a>
+
+        <div class="nav-links">
+            <a href="#how-it-works">How It Works</a>
+            <a href="#find-ride">Find a Ride</a>
+            <a href="#offer-ride">Offer a Ride</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <!-- Homepage Hero Section -->
+    <section class="hero">
+        <p class="tagline">SMARTER COMMUTES. GREENER FUTURE.</p>
+
+        <h1>Better journeys,<br>
+            <span>together.</span>
+        </h1>
+
+        <p class="hero-description">
+            Find people travelling your way, share your ride,
+            save on travel costs, and help reduce unnecessary
+            vehicle trips.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#find-ride" class="btn btn-primary">
+                Find a Ride
+            </a>
+
+            <a href="#offer-ride" class="btn btn-secondary">
+                Offer a Ride
+            </a>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="section">
+        <h2>Carpooling made simple</h2>
+
+        <p class="section-description">
+            Three simple steps to a smarter commute.
+        </p>
+
+        <div class="feature-container">
+
+            <article class="feature-card">
+                <h3>01. Enter Your Route</h3>
+                <p>
+                    Tell us where you are starting from,
+                    where you are going, and when you plan
+                    to travel.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <h3>02. Find Your Match</h3>
+                <p>
+                    Discover available rides with similar
+                    destinations and departure times.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <h3>03. Share the Journey</h3>
+                <p>
+                    Coordinate a shared trip and explore
+                    the potential savings for your commute.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Find a Ride -->
+    <section id="find-ride" class="section">
+        <h2>Find a ride</h2>
+
+        <p class="section-description">
+            Where would you like to go?
+        </p>
+
+        <form id="find-form" class="ride-form">
+
+            <label for="find-origin">Starting location</label>
+            <input id="find-origin" type="text"
+                   placeholder="e.g. Whitefield" required>
+
+            <label for="find-destination">Destination</label>
+            <input id="find-destination" type="text"
+                   placeholder="e.g. Electronic City" required>
+
+            <label for="find-date">Travel date</label>
+            <input id="find-date" type="date" required>
+
+            <label for="find-time">Preferred departure time</label>
+            <input id="find-time" type="time" required>
+
+            <button type="submit" class="btn btn-primary">
+                Search Rides
+            </button>
+
+        </form>
+
+        <div id="ride-results" aria-live="polite">
+            <p>Matching rides will appear here.</p>
+        </div>
+    </section>
+
+    <!-- Offer a Ride -->
+    <section id="offer-ride" class="section">
+        <h2>Have an extra seat?</h2>
+
+        <p class="section-description">
+            Share your journey with someone travelling your way.
+        </p>
+
+        <form id="offer-form" class="ride-form">
+
+            <label for="driver-name">Your name or display name</label>
+            <input id="driver-name" type="text"
+                   placeholder="e.g. Alex" required>
+
+            <label for="offer-origin">Starting location</label>
+            <input id="offer-origin" type="text"
+                   placeholder="e.g. Whitefield" required>
+
+            <label for="offer-destination">Destination</label>
+            <input id="offer-destination" type="text"
+                   placeholder="e.g. Electronic City" required>
+
+            <label for="offer-date">Travel date</label>
+            <input id="offer-date" type="date" required>
+
+            <label for="offer-time">Departure time</label>
+            <input id="offer-time" type="time" required>
+
+            <label for="offer-distance">Approximate one-way distance (km)</label>
+            <input
+                    id="offer-distance"
+                    type="number"
+                    min="1"
+                    max="500"
+                    step="0.5"
+                    placeholder="e.g. 18"
+                    required
+            >
+
+            <label for="offer-seats">Available seats</label>
+            <select id="offer-seats" required>
+                <option value="">Select seats</option>
+                <option value="1">1 seat</option>
+                <option value="2">2 seats</option>
+                <option value="3">3 seats</option>
+                <option value="4">4 seats</option>
+            </select>
+
+            <button type="submit" class="btn btn-primary">
+                Publish Ride
+            </button>
+
+        </form>
+    </section>
+
+    <!-- Environmental Impact -->
+    <section id="environment" class="section">
+        <h2>Every shared ride matters</h2>
+
+        <p class="section-description">
+            Sharing journeys can help reduce separate vehicle
+            trips, fuel consumption, and transport emissions.
+        </p>
+
+        <div class="feature-container">
+
+            <article class="feature-card">
+                <h3 id="shared-count">0</h3>
+                <p>Shared rides recorded</p>
+            </article>
+
+            <article class="feature-card">
+                <h3 id="emissions-saved">0 kg</h3>
+                <p>Estimated emissions avoided</p>
+            </article>
+
+        </div>
+
+        <p class="disclaimer">
+            Environmental figures are estimates and will depend
+            on actual trips and the calculation assumptions.
+        </p>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>ShareRide &copy; 2026 | Better Journeys Together</p>
+    <p>Designed for a more sustainable way to commute.</p>
+</footer>
+
+</body>
+</html>

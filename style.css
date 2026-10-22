@@ -1,0 +1,388 @@
+
+/* ==============================
+   ShareRide - Main Stylesheet
+   ============================== */
+
+:root {
+    --green: #16845b;
+    --green-dark: #0b6241;
+    --green-light: #e8f6ee;
+    --background: #f7faf8;
+    --white: #ffffff;
+    --text: #1b2922;
+    --muted: #68776e;
+    --border: #dce7df;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--text);
+    background: var(--background);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+/* Navigation */
+
+header {
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1120px;
+    min-height: 76px;
+    margin: auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--green);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+/* Hero section */
+
+.hero {
+    max-width: 1120px;
+    margin: 30px auto 0;
+    padding: 100px 24px 110px;
+    text-align: center;
+    background:
+        radial-gradient(
+            ellipse at top,
+            #e0f4e8 0%,
+            var(--background) 68%
+        );
+    border-radius: 28px;
+}
+
+.tagline {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 50px;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    margin: 25px 0 20px;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 1.08;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    color: var(--green);
+}
+
+.hero-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: 13px 24px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--green);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--green-dark);
+}
+
+.btn-secondary {
+    background: var(--white);
+    border-color: var(--border);
+    color: var(--text);
+}
+
+.btn-secondary:hover {
+    border-color: var(--green);
+    color: var(--green-dark);
+}
+
+/* General sections */
+
+.section {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 85px 24px;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    max-width: 650px;
+    margin: 0 auto 32px;
+    text-align: center;
+    color: var(--muted);
+}
+
+/* Feature cards */
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(27, 41, 34, 0.035);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(27, 41, 34, 0.08);
+}
+
+.feature-card h3 {
+    color: var(--green-dark);
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: var(--muted);
+}
+
+/* Ride forms */
+
+.ride-form {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(27, 41, 34, 0.05);
+}
+
+.ride-form label {
+    font-size: 0.92rem;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.ride-form input,
+.ride-form select {
+    width: 100%;
+    min-height: 48px;
+    padding: 11px 13px;
+    color: var(--text);
+    background: var(--white);
+    border: 1px solid #cbd9ce;
+    border-radius: 9px;
+    outline: none;
+}
+
+.ride-form input:focus,
+.ride-form select:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(22, 132, 91, 0.12);
+}
+
+.ride-form button {
+    width: 100%;
+    margin-top: 12px;
+}
+
+#find-ride {
+    background: #eff7f1;
+    border-radius: 24px;
+}
+
+#offer-ride {
+    padding-top: 95px;
+    padding-bottom: 95px;
+}
+
+#ride-results {
+    max-width: 650px;
+    margin: 22px auto 0;
+    color: var(--muted);
+}
+
+#ride-results > p {
+    text-align: center;
+}
+
+/* Environmental impact */
+
+#environment {
+    background: var(--green-light);
+    border-radius: 24px;
+    margin-bottom: 70px;
+}
+
+#environment .feature-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#environment .feature-card {
+    text-align: center;
+}
+
+#environment .feature-card h3 {
+    font-size: 2.2rem;
+}
+
+.disclaimer {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.83rem;
+}
+
+/* Footer */
+
+footer {
+    padding: 28px 20px;
+    text-align: center;
+    background: #14251c;
+    color: #d7e5db;
+}
+
+footer p + p {
+    margin-top: 5px;
+    font-size: 0.88rem;
+    color: #a9beb0;
+}
+
+/* Responsive layout */
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .hero {
+        margin: 15px 12px 0;
+        padding: 75px 20px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    #environment .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 65px 20px;
+    }
+
+    .ride-form {
+        padding: 22px;
+    }
+}
